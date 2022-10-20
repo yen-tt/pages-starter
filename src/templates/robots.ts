@@ -20,5 +20,5 @@ export const render = (data: any): string => {
    * An emtpty robots.txt will NOT prevent any pages from being crawled.
    */
 
-  return ``;
+  return `robots page!`;
 };

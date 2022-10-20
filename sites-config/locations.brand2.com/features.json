@@ -9,6 +9,13 @@
       }
     },
     {
+      "name": "brand2-pizza",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
       "name": "random-template",
       "templateType": "JS",
       "staticPage": {

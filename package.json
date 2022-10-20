@@ -18,7 +18,7 @@
     "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
     "update-pages": "rm -rf package-lock.json node_modules/@yext/pages && npm i",
     "dev:multibrand": "npm run build:local && yext pages generate-test-data --hostname locations.brand1.com && pages dev",
-    "build:multibrand": "npm run build && yext pages generate-test-data --hostname locations.brand1.com && yext pages render --hostname locations.brand1.com"
+    "build:multibrand": "yext pages build && yext pages generate-test-data --hostname locations.brand1.com && yext pages render --hostname locations.brand1.com"
   },
   "engines": {
     "node": ">=17"

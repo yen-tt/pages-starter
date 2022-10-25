@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "npm run build:local && yext pages generate-test-data && pages dev",
     "build:local": "vite build",
+    "test": "vite build --test",
     "build": "yext pages build && yext pages generate-test-data && yext pages render",
     "build:serve": "npm run build && yext pages serve",
     "serve": "yext pages serve",
@@ -17,7 +18,8 @@
     "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output",
     "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
     "update-pages": "rm -rf package-lock.json node_modules/@yext/pages && npm i",
-    "dev:multibrand": "npm run build:local && yext pages generate-test-data --hostname locations.brand1.com && pages dev",
+    "features:multibrand": "pages generate features --scope locations.brand1.com",
+    "dev:multibrand": "npm run build:local && yext pages generate-test-data --hostname locations.brand1.com && pages dev --scope locations.brand1.com",
     "build:multibrand": "yext pages build && yext pages generate-test-data --hostname locations.brand1.com && yext pages render --hostname locations.brand1.com"
   },
   "engines": {
@@ -25,13 +27,13 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@yext/pages": "file:../pages/packages/pages/yext-pages-1.0.0-beta.9.tgz"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.49",
     "@types/react-dom": "^17.0.17",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@yext/pages": "file:../pages/packages/pages/yext-pages-1.0.0-beta.9.tgz",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.8",

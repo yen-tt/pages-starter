@@ -16,6 +16,13 @@
       }
     },
     {
+      "name": "brand2-static",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
       "name": "random-template",
       "templateType": "JS",
       "staticPage": {
@@ -24,13 +31,6 @@
     },
     {
       "name": "robots",
-      "templateType": "JS",
-      "staticPage": {
-        "plugin": {}
-      }
-    },
-    {
-      "name": "brand2-static",
       "templateType": "JS",
       "staticPage": {
         "plugin": {}

@@ -7,15 +7,24 @@
   "type": "module",
   "scripts": {
     "dev": "npm run build:local && yext pages generate-test-data && pages dev",
-    "build:local": "vite build",
+    "build:local": "pages build",
     "build": "yext pages build && yext pages generate-test-data && yext pages render",
     "build:serve": "npm run build && yext pages serve",
     "serve": "yext pages serve",
     "features": "pages generate features",
     "fmt": "prettier -w .",
     "lint": "eslint .",
+    "update-pages": "rm -rf package-lock.json node_modules/@yext/pages && npm i",
     "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output",
-    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite"
+    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
+    "build:local:rayban": "pages build --scope rayban",
+    "features:rayban": "pages generate features --scope rayban",
+    "dev:rayban": "npm run build:local:rayban && yext pages generate-test-data --hostname rayban && pages dev --scope rayban",
+    "build:rayban": "yext pages build --hostname rayban && yext pages generate-test-data --hostname rayban && yext pages render --hostname rayban",
+    "build:local:oakley": "pages build --scope oakley",
+    "features:oakley": "pages generate features --scope oakley",
+    "dev:oakley": "npm run build:local:oakley && yext pages generate-test-data --hostname oakley && pages dev --scope oakley",
+    "build:oakley": "yext pages build --hostname oakley && yext pages generate-test-data --hostname oakley && yext pages render --hostname oakley"
   },
   "engines": {
     "node": ">=17"
@@ -30,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-react": "^2.1.0",
-    "@yext/pages": "1.0.0-beta.6",
+    "@yext/pages": "file:./yext-pages-1.0.0-beta.9.tgz",
     "autoprefixer": "^10.4.8",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.7",

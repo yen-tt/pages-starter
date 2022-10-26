@@ -1,0 +1,56 @@
+{
+  "features": [
+    {
+      "name": "our-brands",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "robots",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "turtlehead-tacos",
+      "templateType": "JS",
+      "staticPage": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "sunglasses",
+      "streamId": "ray-ban-stream",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    }
+  ],
+  "streams": [
+    {
+      "$id": "ray-ban-stream",
+      "fields": [
+        "id",
+        "name",
+        "price",
+        "primaryPhoto",
+        "color"
+      ],
+      "filter": {
+        "savedFilterIds": [
+          "1241554040"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    }
+  ]
+}

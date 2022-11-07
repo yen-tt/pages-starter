@@ -2,6 +2,14 @@
   "features": [
     {
       "name": "location",
+      "streamId": "my-stream-id-2",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "location2",
       "streamId": "my-stream-id-1",
       "templateType": "JS",
       "entityPageSet": {
@@ -31,6 +39,29 @@
     }
   ],
   "streams": [
+    {
+      "$id": "my-stream-id-2",
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "hours",
+        "description",
+        "slug"
+      ],
+      "filter": {
+        "entityTypes": [
+          "location"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    },
     {
       "$id": "my-stream-id-1",
       "fields": [
